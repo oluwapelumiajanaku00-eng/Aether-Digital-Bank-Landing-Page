@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+  <title>aether | Next generation digital banking</title>
+  <meta name="description" content="Take your financial life online. Your aether account is a one-stop-shop for spending, saving, budgeting, investing, and much more.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Reusable logomark, referenced by <use> so it only ships once -->
+  <svg width="0" height="0" style="position:absolute">
+    <defs>
+      <linearGradient id="logo-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" stop-color="#33D35E" />
+        <stop offset="100%" stop-color="#2AB6D9" />
+      </linearGradient>
+      <g id="logomark">
+        <path opacity="0.15" d="M25.54.537 14.737 20.24h5.986L31.525.537H25.54Z" fill="url(#logo-gradient)"/>
+        <path opacity="0.5" d="M18.17.537 7.369 20.24h5.986L24.157.537h-5.986Z" fill="url(#logo-gradient)"/>
+        <path d="M10.803.537 0 20.24h5.986L16.789.537h-5.986Z" fill="url(#logo-gradient)"/>
+      </g>
+    </defs>
+  </svg>
+
+  <header class="site-header" id="site-header">
+    <div class="container">
+      <a href="#top" class="logo">
+        <svg class="logo__mark" viewBox="0 0 32 21" aria-hidden="true"><use href="#logomark"/></svg>
+        aether
+      </a>
+
+      <nav class="primary-nav" id="primary-nav" aria-label="Primary">
+        <ul class="primary-nav__list">
+          <li><a href="#top" aria-current="page">Home</a></li>
+          <li><a href="#why-aether">About</a></li>
+          <li><a href="#footer">Contact</a></li>
+          <li><a href="#articles">Blog</a></li>
+          <li><a href="#">Careers</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <a href="#invite" class="btn header-actions__cta">Request Invite</a>
+        <button
+          type="button"
+          class="nav-toggle"
+          id="nav-toggle"
+          aria-expanded="false"
+          aria-controls="primary-nav"
+        >
+          <span class="visually-hidden">Menu</span>
+          <img class="nav-toggle__icon-open" src="./images/icon-hamburger.svg" alt="" aria-hidden="true">
+          <img class="nav-toggle__icon-close" src="./images/icon-close.svg" alt="" aria-hidden="true">
+        </button>
+      </div>
+    </div>
+    <div class="mobile-nav-backdrop" id="nav-backdrop"></div>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="container">
+        <div class="hero__content">
+          <h1 class="hero__title">Next generation digital banking</h1>
+          <p class="hero__text">
+            Take your financial life online. Your aether account will be a
+            one-stop-shop for spending, saving, budgeting, investing, and
+            much more.
+          </p>
+          <a href="#invite" class="btn">Request Invite</a>
+        </div>
+
+        <div class="hero__media">
+          <div class="hero__media-inner">
+            <img class="hero__bg" src="./images/bg-intro-desktop.svg" alt="" aria-hidden="true">
+            <img class="hero__mockups" src="./images/image-mockups.png" alt="Four aether mobile app screens showing account balances and the app's onboarding screen">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="features" id="why-aether">
+      <div class="container">
+        <div class="section-heading">
+          <h2 class="features__title">Why choose aether?</h2>
+          <p class="features__intro">
+            We leverage Open Banking to turn your bank account into your
+            financial hub. Control your finances like never before.
+          </p>
+        </div>
+
+        <div class="features__grid">
+          <article class="feature">
+            <img class="feature__icon" src="./images/icon-online.svg" alt="" aria-hidden="true">
+            <h3 class="feature__title">Online Banking</h3>
+            <p class="feature__text">
+              Our modern web and mobile applications allow you to keep track
+              of your finances wherever you are in the world.
+            </p>
+          </article>
+
+          <article class="feature">
+            <img class="feature__icon" src="./images/icon-budgeting.svg" alt="" aria-hidden="true">
+            <h3 class="feature__title">Simple Budgeting</h3>
+            <p class="feature__text">
+              See exactly where your money goes each month. Receive
+              notifications when you're close to hitting your limits.
+            </p>
+          </article>
+
+          <article class="feature">
+            <img class="feature__icon" src="./images/icon-onboarding.svg" alt="" aria-hidden="true">
+            <h3 class="feature__title">Fast Onboarding</h3>
+            <p class="feature__text">
+              We don't do branches. Open your account in minutes online and
+              start taking control of your finances right away.
+            </p>
+          </article>
+
+          <article class="feature">
+            <img class="feature__icon" src="./images/icon-api.svg" alt="" aria-hidden="true">
+            <h3 class="feature__title">Open API</h3>
+            <p class="feature__text">
+              Manage your savings, investments, pension, and much more from
+              one account. Tracking your money has never been easier.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="articles" id="articles">
+      <div class="container">
+        <h2 class="articles__title">Latest Articles</h2>
+
+        <div class="articles__grid">
+          <article class="article-card">
+            <img class="article-card__image" src="./images/image-currency.jpg" alt="">
+            <div class="article-card__body">
+              <p class="article-card__author">By Claire Robinson</p>
+              <h3 class="article-card__title"><a href="#">Receive money in any currency with no fees</a></h3>
+              <p class="article-card__excerpt">
+                The world is getting smaller and we're becoming more mobile.
+                So why should you be forced to only receive money in a
+                single …
+              </p>
+            </div>
+          </article>
+
+          <article class="article-card">
+            <img class="article-card__image" src="./images/image-restaurant.jpg" alt="">
+            <div class="article-card__body">
+              <p class="article-card__author">By Wilson Hutton</p>
+              <h3 class="article-card__title"><a href="#">Treat yourself without worrying about money</a></h3>
+              <p class="article-card__excerpt">
+                Our simple budgeting feature allows you to separate out your
+                spending and set realistic limits each month. That means
+                you …
+              </p>
+            </div>
+          </article>
+
+          <article class="article-card">
+            <img class="article-card__image" src="./images/image-plane.jpg" alt="">
+            <div class="article-card__body">
+              <p class="article-card__author">By Wilson Hutton</p>
+              <h3 class="article-card__title"><a href="#">Take your aether card wherever you go</a></h3>
+              <p class="article-card__excerpt">
+                We want you to enjoy your travels. This is why we don't
+                charge any fees on purchases while you're abroad. We'll even
+                show you …
+              </p>
+            </div>
+          </article>
+
+          <article class="article-card">
+            <img class="article-card__image" src="./images/image-confetti.jpg" alt="">
+            <div class="article-card__body">
+              <p class="article-card__author">By Claire Robinson</p>
+              <h3 class="article-card__title"><a href="#">Our invite-only Beta accounts are now live!</a></h3>
+              <p class="article-card__excerpt">
+                After a lot of hard work by the whole team, we're excited to
+                launch our closed beta. It's easy to request an invite
+                through the site …
+              </p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer" id="footer">
+    <div class="container">
+      <div class="footer__brand">
+        <a href="#top" class="logo logo--light">
+          <svg class="logo__mark" viewBox="0 0 32 21" aria-hidden="true"><use href="#logomark"/></svg>
+          aether
+        </a>
+
+        <ul class="social-list">
+          <li>
+            <a href="#" aria-label="aether on Facebook">
+              <img src="./images/icon-facebook.svg" alt="" aria-hidden="true">
+            </a>
+          </li>
+          <li>
+            <a href="#" aria-label="aether on YouTube">
+              <img src="./images/icon-youtube.svg" alt="" aria-hidden="true">
+            </a>
+          </li>
+          <li>
+            <a href="#" aria-label="aether on Twitter">
+              <img src="./images/icon-twitter.svg" alt="" aria-hidden="true">
+            </a>
+          </li>
+          <li>
+            <a href="#" aria-label="aether on Pinterest">
+              <img src="./images/icon-pinterest.svg" alt="" aria-hidden="true">
+            </a>
+          </li>
+          <li>
+            <a href="#" aria-label="aether on Instagram">
+              <img src="./images/icon-instagram.svg" alt="" aria-hidden="true">
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <nav class="footer-nav" aria-label="Footer">
+        <ul class="footer-nav__list">
+          <li><a href="#">About Us</a></li>
+          <li><a href="#footer">Contact</a></li>
+          <li><a href="#articles">Blog</a></li>
+          <li><a href="#">Careers</a></li>
+        </ul>
+        <ul class="footer-nav__list">
+          <li><a href="#">Support</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+        </ul>
+      </nav>
+
+      <div class="footer__cta">
+        <a href="#invite" class="btn">Request Invite</a>
+        <p class="footer__copyright">&copy; aether. All Rights Reserved</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
